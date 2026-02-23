@@ -184,42 +184,6 @@ window.addEventListener('click', (e) => {
     }
 });
 
-// Form submission handler
-function handleSubmit(event) {
-    event.preventDefault();
-    
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const service = document.getElementById('service').value;
-    const message = document.getElementById('message').value;
-    
-    // Show success message
-    modalBody.innerHTML = `
-        <div style="text-align: center; padding: 2rem 0;">
-            <div style="width: 80px; height: 80px; margin: 0 auto 1.5rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-            </div>
-            <h2 style="color: var(--primary-color); margin-bottom: 1rem;">Thank You, ${name}!</h2>
-            <p style="color: #555; line-height: 1.8;">We've received your inquiry about <strong>${getServiceName(service)}</strong>. Our team will get back to you shortly at <strong>${email}</strong>.</p>
-        </div>
-    `;
-    modal.style.display = 'block';
-    
-    // Reset form
-    event.target.reset();
-}
-
-function getServiceName(service) {
-    const serviceNames = {
-        sharepoint: 'SharePoint Solutions',
-        salesforce: 'Salesforce Solutions',
-        both: 'Both SharePoint and Salesforce Solutions'
-    };
-    return serviceNames[service] || 'Our Services';
-}
-
 // Add navbar background on scroll
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
