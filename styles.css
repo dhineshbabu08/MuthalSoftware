@@ -380,6 +380,35 @@ body {
     color: var(--primary-color);
 }
 
+.office-address {
+    margin-top: 2rem;
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+.address-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 0.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.address-icon svg {
+    width: 20px;
+    height: 20px;
+    color: white;
+}
+
+.office-address p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
 /* Footer */
 .footer {
     background: var(--dark-bg);
